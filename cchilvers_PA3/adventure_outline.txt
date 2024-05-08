@@ -1,0 +1,51 @@
+#Choose Your Own Adventure
+
+# Google “Python random module” to figure out how to use this module!
+import random
+
+# variable creation & setting loop control variable
+next_room = 1
+
+# generate a random number
+death_die = random._________
+
+# this loop will keep going until next_room variable = 0
+# when you want the game to end, all you have to do  is set next_room = 0
+while next_room != 0:
+
+    # each if statement inside this while loop will correspond to a different “room” in your game
+    if next_room == 1:
+	# describe the room
+        print('You are in a small room. There is a "closet" and a doorway to the "hall".' )
+        print()
+	# have the user decide where to go
+        choice = input(“Which room would you like to choose? Your options are (‘closet’ and ‘hall’ “)
+        if choice == 'closet':
+	     # you can choose what number/range of number means death in your game
+	     # here, we’ve decided that if the random number was above 98, they die
+            if death_die > 98:
+                print("You were mauled by a vampire! RIP.")
+                next_room = 0
+            else:    
+                next_room = 2
+		 # generate a new random number
+                death_die = random._______
+        elif choice == 'hall':
+            next_room = 3
+        else:
+            print(choice, " wasn't one of the options. Try again." )
+
+    # section for choosing 'closet' — remember in the if choice == “closet” if-suite, we set next_room = 2 
+    elif next_room == 2:
+        print('You\'re in a barren closet. There\'s nothing to do here except go "back".' )
+        print()
+        choice = input('Write "back" to go back. ')
+        if choice == "back":
+            next_room = 1
+        else:
+            print(choice, " wasn't one of the options. Try again." )
+
+    # section for choosing 'hall' 
+    elif next_room == 3:
+	#write what happens in the hall here
+	
