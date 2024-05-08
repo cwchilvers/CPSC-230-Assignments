@@ -15,7 +15,7 @@
 A collection of assignments from my Computer Science I course at Chapman University.
 
 ## Technologies Used
-* Python
+* [Python](https://www.python.org/)
 
 ## Contact Information
 <p align="center">
